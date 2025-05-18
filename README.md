@@ -1,5 +1,5 @@
 
-# Exploratory Data Analysis Sool
+# Exploratory Data Analysis Solar Radiation Measurement Data
 
 This project performs an **Exploratory Data Analysis (EDA)** on a datasets, aiming to uncover patterns, trends, and insights that can guide further data processing or machine learning tasks. The notebook walks through key steps of understanding, cleaning, visualizing, and interpreting the dataset.
 
