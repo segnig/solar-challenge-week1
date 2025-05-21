@@ -1,20 +1,25 @@
 import pandas as pd
+import os
 
 def load_data() -> pd.DataFrame:
-    togo_df = pd.read_csv('notebooks\\Data\\cleaned_togo.csv')
-    benin_df = pd.read_csv('notebooks\\Data\\benin_cleaned.csv')
-    sierra_df = pd.read_csv("notebooks\\Data\\sierra_cleaned.csv")
+    # Base directory: adjusts to current file's location
+    base_path = os.path.join(os.path.dirname(__file__), '..', 'notebooks', 'Data')
 
+    # Load the CSVs with platform-independent paths
+    togo_df = pd.read_csv(os.path.join(base_path, 'cleaned_togo.csv'))
+    benin_df = pd.read_csv(os.path.join(base_path, 'benin_cleaned.csv'))
+    sierra_df = pd.read_csv(os.path.join(base_path, 'sierra_cleaned.csv'))
 
-    # Create a new column 'country' in each DataFrame
+    # Add country column to each
     togo_df['country'] = 'Togo' 
     benin_df['country'] = 'Benin'
     sierra_df['country'] = 'Sierra Leone'
-    
-    # Concatenate the DataFrames
+
+    # Combine the DataFrames
     combined_df = pd.concat([togo_df, benin_df, sierra_df], ignore_index=True)
-    
+
     return combined_df
+
 
 def get_country_data(df: pd.DataFrame, country: str) -> pd.DataFrame:
     """
