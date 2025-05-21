@@ -1,9 +1,9 @@
 import pandas as pd
 
 def load_data() -> pd.DataFrame:
-    togo_df = pd.read_csv('notebooks\\Data\\cleaned_togo.csv')
-    benin_df = pd.read_csv('notebooks\\Data\\benin_cleaned.csv')
-    sierra_df = pd.read_csv("notebooks\\Data\\sierra_cleaned.csv")
+    togo_df = pd.read_csv('Data\\cleaned_togo.csv')
+    benin_df = pd.read_csv('Data\\benin_cleaned.csv')
+    sierra_df = pd.read_csv("Data\\sierra_cleaned.csv")
 
 
     # Create a new column 'country' in each DataFrame
