@@ -2,6 +2,8 @@
 .venv
 __pycache__/
 
+# Ignore data files
+
 
 # Ignore Jupyter Notebook checkpoints
 .ipynb_checkpoints/
